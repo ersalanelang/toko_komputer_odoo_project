@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- model.name inherit form view -->
+    <record id="respartner_direksi_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form Direksi</field>
+        <field name="model">res.partner</field>
+        <field name="mode">extension</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Add your xpath here -->
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="is_direksi" />
+            </xpath> 
+            <!-- <xpath expr="//field[@name='is_konsumen']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath> 
+            <xpath expr="//field[@name='is_direksi']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>       -->
+        </field>
+    </record>
+
+    <!-- model.name inherit search view -->
+    <record id="respartner_direksi_view_search_inherit" model="ir.ui.view">
+        <field name="name">model.name.inherit.view.search</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <!-- Add your xpath here -->
+            <field name="parent_id" position="after">
+                <filter name="direksi" string="Direksi" domain="[('is_direksi', '=', True)]" />
+            </field>
+        </field>
+    </record>
+
+    <!-- model.name action window -->
+    <record id="respartner_direksi_action" model="ir.actions.act_window">
+        <field name="name">Direksi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form,kanban</field>
+         <field name="context">
+            {
+                'search_default_direksi': 1,
+                'default_is_direksi':True 
+            }
+        </field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="komputertoko_direksi_menu_act" 
+        name="Direksi" 
+        parent="komputertoko_menu_root" 
+        action="respartner_direksi_action" 
+        sequence="40"/>
+</odoo>

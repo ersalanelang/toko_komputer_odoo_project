@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- komputertoko.penjualan tree view -->
+    <record id="komputertoko_penjualan_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Penjualan</field>
+        <field name="model">komputertoko.penjualan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="nama_pembeli" />
+                <field name="tgl_penjualan" />
+                <!-- <group>
+                    <field name="detailpenjualan_ids">
+                        <field name="qty"/>
+                    </field>
+                </group> -->
+                <field name="total_bayar" />
+                <field name="state" class="badge badge-pill badge-success" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- komputertoko.penjualan form view -->
+    <record id="komputertoko_penjualan_view_form" model="ir.ui.view">
+        <field name="name">Form Penjualan</field>
+        <field name="model">komputertoko.penjualan</field>
+        <field name="arch" type="xml">
+            <form string="Form Penjualan">
+                <header>
+                    <button name="action_confirm" type="object" string="Confirm" class="btn btn-primary" states="draft" />
+                    <button name="action_done" type="object" string="Done" class="btn btn-primary" states="confirm"/>
+                    <button name="action_cancelled" type="object" string="Cancelled" class="btn btn-danger" states="confirm" confirm="Anda yakin mengcancel quotation ini?"/>
+                    <button name="action_draft" type="object" string="Kembali ke Draft" class="btn btn-warning" states="cancelled" confirm="Anda yakin mengedit quotation ini?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft, confirm, done" />
+                </header>
+                <sheet>
+                    <group name="Penjualan">
+                        <field name="name" attrs="{'readonly' : [('state', '!=', 'draft')]}"/>
+                        <field name="nama_pembeli" attrs="{'readonly' : [('state', '!=', 'draft')]}"/>
+                        <field name="tgl_penjualan" attrs="{'readonly' : [('state', '!=', 'draft')]}"/>
+                        <field name="total_bayar" attrs="{'readonly' : [('state', '!=', 'draft')]}"/>
+                    </group>
+                    <group name="Daftar Komponen" string="Daftar Komponen">
+                        <field name="detailpenjualan_ids" attrs="{'readonly' : [('state', '!=', 'draft')]}">
+                            <tree editable="bottom">
+                                <field name="komponen_id"/>
+                                <field name="harga_satuan"/>
+                                <field name="qty"/>
+                                <field name="subtotal" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- dikimart.penjualan action window -->
+    <record id="komputertoko_penjualan_action" model="ir.actions.act_window">
+        <field name="name">Penjualan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">komputertoko.penjualan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="penjualan_view_menu_act" 
+        name="Penjualan" 
+        parent="komputertoko_menu_root" 
+        action="komputertoko_penjualan_action" 
+        sequence="60"/>
+
+</odoo>

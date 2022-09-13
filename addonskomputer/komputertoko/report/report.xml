@@ -1,0 +1,66 @@
+<odoo>
+
+    <!-- Report Supplier -->
+    <record id="report_supplier_xlsx" model="ir.actions.report">
+        <field name="name">Print Excel</field>
+        <field name="model">komputertoko.supplier</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">komputertoko.report_supplier_xlsx</field>
+        <field name="report_file">komputertoko.report_supplier_xlsx</field>
+        <field name="binding_model_id" ref="model_komputertoko_supplier"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Report Supplier -->
+    <record id="report_penjualan_xlsx" model="ir.actions.report">
+        <field name="name">Print Excel</field>
+        <field name="model">komputertoko.penjualan</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">komputertoko.report_penjualan_xlsx</field>
+        <field name="report_file">komputertoko.report_penjualan_xlsx</field>
+        <field name="binding_model_id" ref="model_komputertoko_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Report Supplier -->
+    <record id="report_komponen_xlsx" model="ir.actions.report">
+        <field name="name">Print Excel</field>
+        <field name="model">komputertoko.komponen</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">komputertoko.report_komponen_xlsx</field>
+        <field name="report_file">komputertoko.report_komponen_xlsx</field>
+        <field name="binding_model_id" ref="model_komputertoko_komponen"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_supplier_pdf" model="ir.actions.report">
+        <field name="name">Print PDF</field>
+        <field name="model">komputertoko.supplier</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">komputertoko.report_supplier_pdf</field>
+        <field name="report_file">komputertoko.report_supplier_pdf</field>
+        <field name="binding_model_id" ref="model_komputertoko_supplier"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_penjualan_pdf" model="ir.actions.report">
+        <field name="name">Print PDF</field>
+        <field name="model">komputertoko.penjualan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">komputertoko.report_penjualan_pdf</field>
+        <field name="report_file">komputertoko.report_penjualan_pdf</field>
+        <field name="binding_model_id" ref="model_komputertoko_penjualan"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="report_komponen_pdf" model="ir.actions.report">
+        <field name="name">Print PDF</field>
+        <field name="model">komputertoko.komponen</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">komputertoko.report_komponen_pdf</field>
+        <field name="report_file">komputertoko.report_komponen_pdf</field>
+        <field name="binding_model_id" ref="model_komputertoko_komponen"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

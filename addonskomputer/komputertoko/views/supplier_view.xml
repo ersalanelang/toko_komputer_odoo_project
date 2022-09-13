@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- model.name tree view -->
+    <record id="komputertoko_supplier_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Suppler</field>
+        <field name="model">komputertoko.supplier</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name" />
+                <field name="alamat" />
+                <field name="no_telp" />
+                <field name="komponen_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- model.name form view -->
+    <record id="komputertoko_supplier_view_form" model="ir.ui.view">
+        <field name="name">model.name.view.form</field>
+        <field name="model">komputertoko.supplier</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name" />
+                        <field name="alamat" />
+                        <field name="no_telp" />
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="komponen_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- model.name action window -->
+    <record id="komputertoko_supplier_action" model="ir.actions.act_window">
+        <field name="name">Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">komputertoko.supplier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="komputertoko_supplier_menu_act" name="Supplier" parent="komputertoko_menu_root" action="komputertoko_supplier_action" sequence="50"/>
+</odoo>

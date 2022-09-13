@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="report_supplier_pdf" name="Template Name">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <h2><b> FAKTUR SUPPLIER INTERNAL </b></h2>
+                    <t t-foreach="docs" t-as="d">
+                        <div class="row">
+                            <div class="col-4">Nama : </div>
+                            <div class="col-8"><span t-field="d.name"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Alamat: </div>
+                            <div class="col-8"><span t-field="d.alamat"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">No. Telepon : </div>
+                            <div class="col-8"><span t-field="d.no_telp"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">List Komponen : </div>
+                        </div>
+                        <div class="row">
+                            <t t-foreach="d.komponen_id" t-as="ds">
+                                <div class="col-md-12"><span t-field="ds.name"/></div>
+                            </t>
+                        </div>
+                        <div class="row">
+                            <t>========================================================================== </t>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

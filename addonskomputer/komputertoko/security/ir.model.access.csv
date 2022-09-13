@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_komputertoko_kelompokkomponen,access.komputertoko.kelompokkomponen,model_komputertoko_kelompokkomponen,,1,1,1,1
+access_komputertoko_komponen,access.komputertoko.komponen,model_komputertoko_komponen,,1,1,1,1
+access_komputertoko_person,access.komputertoko.person,model_komputertoko_person,,1,1,1,1
+access_komputertoko_pegawai,access.komputertoko.pegawai,model_komputertoko_pegawai,,1,1,1,1
+access_komputertoko_supplier,access.komputertoko.supplier,model_komputertoko_supplier,,1,1,1,1
+access_komputertoko_penjualan,access.komputertoko.penjualan,model_komputertoko_penjualan,,1,1,1,1
+access_komputertoko_detailpenjualan,access.komputertoko.detailpenjualan,model_komputertoko_detailpenjualan,,1,1,1,1
+access_komputertoko_komponendatang,access.komputertoko.komponendatang,model_komputertoko_komponendatang,,1,1,1,1
+

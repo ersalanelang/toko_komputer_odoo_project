@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- dikimart.kelompokbarang tree view -->
+    <record id="komputertoko_kelompokkomponen_view_tree" model="ir.ui.view">
+        <field name="name">komputertoko.kelompokkomponen.view.tree</field>
+        <field name="model">komputertoko.kelompokkomponen</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="kode_komponen"/>
+                <field name="jml_item" />
+                <field name="daftar" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- dikimart.kelompokbarang form view -->
+    <record id="komputertoko_kelompokkomponen" model="ir.ui.view">
+        <field name="name">komputertoko.kelompokkomponen.view.form</field>
+        <field name="model">komputertoko.kelompokkomponen</field>
+        <field name="arch" type="xml">
+            <form string="kelompok Barang">
+                <sheet>
+                    <group name="komponenpc" string="Komponen PC">
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="kode_komponen"/>
+                        <field name="jml_item" />
+                    </group>
+                    <group name="Komponengrup" string="Komponen Grup">
+                        <field name="komponen_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+		<!-- Akhir Perubahan -->
+
+    <!-- komputertoko.kelompokkomponen action window -->
+    <record id="komputertoko_kelompokkomponen_action" model="ir.actions.act_window">
+        <field name="name">Komponen PC</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">komputertoko.kelompokkomponen</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="komputertoko_kelompokkomponen_menu_act"
+        name="Komponen PC"
+        parent="komputertoko_komponen_menu_categ"
+        action="komputertoko_kelompokkomponen_action"
+        sequence="10"/>
+
+</odoo>

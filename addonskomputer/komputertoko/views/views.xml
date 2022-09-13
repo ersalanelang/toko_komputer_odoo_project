@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="komputertoko.list">
+      <field name="name">komputertoko list</field>
+      <field name="model">komputertoko.komputertoko</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="komputertoko.action_window">
+      <field name="name">komputertoko window</field>
+      <field name="res_model">komputertoko.komputertoko</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="komputertoko.action_server">
+      <field name="name">komputertoko server</field>
+      <field name="model_id" ref="model_komputertoko_komputertoko"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="komputertoko" id="komputertoko.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="komputertoko.menu_1" parent="komputertoko.menu_root"/>
+    <menuitem name="Menu 2" id="komputertoko.menu_2" parent="komputertoko.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="komputertoko.menu_1_list" parent="komputertoko.menu_1"
+              action="komputertoko.action_window"/>
+    <menuitem name="Server to list" id="komputertoko" parent="komputertoko.menu_2"
+              action="komputertoko.action_server"/>
+-->
+  </data>
+</odoo>
