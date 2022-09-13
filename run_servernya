@@ -1,0 +1,1 @@
+./odoo-bin --addons-path=/root/hashmicro/tokokomputer/addons,/root/hashmicro/tokokomputer/addonskomputer -d komputerdb --db_port 5432 --xmlrpc-port=8069 --limit-memory-hard 0 --limit-time-real=10000 -u komputertoko
