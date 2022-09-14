@@ -3,8 +3,11 @@ access_komputertoko_kelompokkomponen,access.komputertoko.kelompokkomponen,model_
 access_komputertoko_komponen,access.komputertoko.komponen,model_komputertoko_komponen,,1,1,1,1
 access_komputertoko_person,access.komputertoko.person,model_komputertoko_person,,1,1,1,1
 access_komputertoko_pegawai,access.komputertoko.pegawai,model_komputertoko_pegawai,,1,1,1,1
+access_komputertoko_teknisi,access.komputertoko.teknisi,model_komputertoko_teknisi,,1,1,1,1
 access_komputertoko_supplier,access.komputertoko.supplier,model_komputertoko_supplier,,1,1,1,1
 access_komputertoko_penjualan,access.komputertoko.penjualan,model_komputertoko_penjualan,,1,1,1,1
+
 access_komputertoko_detailpenjualan,access.komputertoko.detailpenjualan,model_komputertoko_detailpenjualan,,1,1,1,1
 access_komputertoko_komponendatang,access.komputertoko.komponendatang,model_komputertoko_komponendatang,,1,1,1,1
 
+access_komputertoko_service,access.komputertoko.service,model_komputertoko_service,,1,1,1,1

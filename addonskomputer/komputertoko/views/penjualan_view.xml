@@ -16,7 +16,11 @@
                     </field>
                 </group> -->
                 <field name="total_bayar" />
-                <field name="state" class="badge badge-pill badge-success" />
+                <field name="state" decoration-success="state=='confirm'"
+                    decoration-info="state=='done'"
+                    decoration-danger="state=='cancelled'"
+                    decoration-muted="state=='draft'"
+                    widget="badge"/>
             </tree>
         </field>
     </record>
@@ -67,9 +71,9 @@
     <!-- This Menu Item must have a parent and an action -->
     <menuitem 
         id="penjualan_view_menu_act" 
-        name="Penjualan" 
-        parent="komputertoko_menu_root" 
+        name="Beli Komponen" 
+        parent="komputertoko_beliservice_menu_categ" 
         action="komputertoko_penjualan_action" 
-        sequence="60"/>
+        sequence="11"/>
 
 </odoo>

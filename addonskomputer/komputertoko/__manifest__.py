@@ -32,15 +32,18 @@
         'views/komponen_view.xml',
         'views/person_view.xml',
         'views/pegawai_view.xml',
+        'views/teknisi_view.xml',
         'views/pembeli_view.xml',
         'views/direksi_view.xml',
         'views/supplier_view.xml',
         'views/penjualan_view.xml',
+        'views/service_view.xml',
         'report/report.xml',
         'report/print_faktur_supplier.xml',
         'report/print_faktur_penjualan.xml',
         'report/print_faktur_komponen.xml',
         'wizard/komponendatang_view.xml',
+        'report/print_faktur_service.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

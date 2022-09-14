@@ -7,3 +7,4 @@ from . import person
 from . import ResPartner
 from . import supplier
 from . import penjualan
+from . import service

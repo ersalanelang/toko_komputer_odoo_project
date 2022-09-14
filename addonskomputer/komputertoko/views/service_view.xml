@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- komputertoko.service tree view -->
+    <record id="komputertoko_service_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Service</field>
+        <field name="model">komputertoko.service</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="nama_service" />
+                <field name="device" />
+                <field name="tgl_service" />
+                <field name="masalah" />
+                <field name="nama_teknisi" />
+                <field name="state" decoration-success="state=='progress'"
+                    decoration-info="state=='selesai'"
+                    decoration-danger="state=='cancelled'"
+                    decoration-muted="state=='masuk'"
+                    widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- komputertoko.service form view -->
+    <record id="komputertoko_service_view_form" model="ir.ui.view">
+        <field name="name">Form service</field>
+        <field name="model">komputertoko.service</field>
+        <field name="arch" type="xml">
+            <form string="Form service">
+                <header>
+                    <button name="action_progress" type="object" string="Progress" class="btn btn-primary" states="masuk" />
+                    <button name="action_selesai" type="object" string="Selesai" class="btn btn-primary" states="progress"/>
+                    <button name="action_cancelled" type="object" string="Cancelled" class="btn btn-danger" states="progress" confirm="Anda yakin mengcancel quotation ini?"/>
+                    <button name="action_masuk" type="object" string="Masuk" class="btn btn-warning" states="cancelled" confirm="Anda yakin mengedit quotation ini?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="masuk,progress,selesai" />
+                </header>
+                <sheet>
+                    <group name="service" attrs="{'readonly' : [('state', '!=', 'masuk')]}" >
+                        <field name="name" />
+                        <field name="nama_service" />
+                        <field name="device" />
+                        <field name="tgl_service" />
+                        <field name="masalah" />
+                        <field name="nama_teknisi" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- komputertoko.service action window -->
+    <record id="komputertoko_service_action" model="ir.actions.act_window">
+        <field name="name">Service</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">komputertoko.service</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+            id="service_view_menu_act" 
+            name="Service Device" 
+            parent="komputertoko_beliservice_menu_categ" 
+            action="komputertoko_service_action" 
+            sequence="10"/>
+</odoo>

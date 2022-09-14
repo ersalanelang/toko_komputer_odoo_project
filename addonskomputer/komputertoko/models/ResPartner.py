@@ -5,6 +5,9 @@ class ResPartner(models.Model):
     _description = 'New Description'
 
     poin        = fields.Integer(string='Poin')
-    # level       = fields.Char(string='Level')
+    level       = fields.Char(string='Level')
     is_konsumen = fields.Boolean(string='Is Konsumen')
     is_direksi  = fields.Boolean(string='Is Direksi')
+    # id_member = fields.Many2one(
+    #     string=
+    # )

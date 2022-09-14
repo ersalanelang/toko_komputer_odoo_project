@@ -2,29 +2,29 @@
 <odoo> 
     <!-- model.name inherit tree view -->
     <record id="komputertoko_person_view_tree_inherit" model="ir.ui.view">
-        <field name="name">Daftar Pegawai</field>
-        <field name="model">komputertoko.pegawai</field>
-
+        <field name="name">Daftar Teknisi</field>
+        <field name="model">komputertoko.teknisi</field>
+        <field name="mode">primary</field>
         <field name="inherit_id" ref="komputertoko_person_view_tree"/>
         <field name="arch" type="xml">
             <!-- Add your xpath here -->
             <xpath expr="//field[@name='name']" position="before">
-                <field name="id_pegawai" />
+                <field name="id_teknisi" />
             </xpath> 
         </field>
     </record>
 
-    <!-- komputertoko.pegawai inherit form view -->
-    <record id="komputertoko_pegawai_view_form_inherit" model="ir.ui.view">
-        <field name="name">Form Pegawai</field>
-        <field name="model">komputertoko.pegawai</field>
-
+    <!-- komputertoko.teknisi inherit form view -->
+    <record id="komputertoko_teknisi_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form Teknisi</field>
+        <field name="model">komputertoko.teknisi</field>
+        <field name="mode">primary</field>
         <field name="inherit_id" ref="komputertoko_person_view_form"/>
         <field name="arch" type="xml">
             <!-- Add your xpath here -->
             <xpath expr="//form//sheet//group[2]" position="after">
                 <group name="id" string="ID">
-                    <field name="id_pegawai" />
+                    <field name="id_teknisi" />
                 </group>
             </xpath>
             <xpath expr="//field[@name='alamat']" position="attributes">
@@ -34,18 +34,18 @@
     </record>
 
     <!-- model.name action window -->
-    <record id="komputertoko_pegawai_action" model="ir.actions.act_window">
-        <field name="name">Pegawai</field>
+    <record id="komputertoko_teknisi_action" model="ir.actions.act_window">
+        <field name="name">Teknisi</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">komputertoko.pegawai</field>
+        <field name="res_model">komputertoko.teknisi</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- This Menu Item must have a parent and an action -->
     <menuitem 
-            id="komputertoko_pegawai_menu_act" 
-            name="Pegawai" 
+            id="komputertoko_teknisi_menu_act" 
+            name="Teknisi" 
             parent="komputertoko_pekerja_menu_categ" 
-            action="komputertoko_pegawai_action" 
-            sequence="10"/>
+            action="komputertoko_teknisi_action" 
+            sequence="20"/>
 </odoo>

@@ -15,3 +15,10 @@ class pegawai(models.Model):
     _description = 'New Description'
 
     id_pegawai = fields.Char(string='ID pegawai')
+
+class teknisi(models.Model):
+    _name = 'komputertoko.teknisi'
+    _inherit = 'komputertoko.person'
+    _description = 'New Description'
+
+    id_teknisi = fields.Char(string='ID Teknisi')

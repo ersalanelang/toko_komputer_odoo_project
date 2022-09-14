@@ -41,6 +41,6 @@
         name="Input komponen"
         parent="komputertoko_menu_root"
         action="komponendatang_action_wizzard"
-        sequence="70"/>
+        sequence="40"/>
 
 </odoo>

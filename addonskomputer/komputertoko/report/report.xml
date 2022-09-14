@@ -33,6 +33,17 @@
         <field name="binding_type">report</field>
     </record>
 
+    <!-- Report Supplier -->
+    <record id="report_service_xlsx" model="ir.actions.report">
+        <field name="name">Print Excel</field>
+        <field name="model">komputertoko.service</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">komputertoko.report_service_xlsx</field>
+        <field name="report_file">komputertoko.report_service_xlsx</field>
+        <field name="binding_model_id" ref="model_komputertoko_service"/>
+        <field name="binding_type">report</field>
+    </record>
+
     <record id="report_supplier_pdf" model="ir.actions.report">
         <field name="name">Print PDF</field>
         <field name="model">komputertoko.supplier</field>
@@ -63,4 +74,13 @@
         <field name="binding_type">report</field>
     </record>
 
+    <record id="report_service_pdf22" model="ir.actions.report">
+        <field name="name">Print PDF</field>
+        <field name="model">komputertoko.service</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">komputertoko.report_service_pdf22</field>
+        <field name="report_file">komputertoko.report_service_pdf22</field>
+        <field name="binding_model_id" ref="model_komputertoko_service"/>
+        <field name="binding_type">report</field>
+    </record>
 </odoo>

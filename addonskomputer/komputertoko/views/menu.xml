@@ -12,4 +12,18 @@
         name="Komponen"
         parent="komputertoko_menu_root"
         sequence="10"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="komputertoko_pekerja_menu_categ" 
+        name="Pekerja"
+        parent="komputertoko_menu_root"
+        sequence="15"/>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="komputertoko_beliservice_menu_categ" 
+        name="Beli/Service"
+        parent="komputertoko_menu_root"
+        sequence="35"/>
 </odoo>

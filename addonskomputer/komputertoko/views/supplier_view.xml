@@ -46,5 +46,5 @@
     </record>
 
     <!-- This Menu Item must have a parent and an action -->
-    <menuitem id="komputertoko_supplier_menu_act" name="Supplier" parent="komputertoko_menu_root" action="komputertoko_supplier_action" sequence="50"/>
+    <menuitem id="komputertoko_supplier_menu_act" name="Supplier" parent="komputertoko_menu_root" action="komputertoko_supplier_action" sequence="30"/>
 </odoo>
