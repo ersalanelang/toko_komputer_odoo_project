@@ -3,6 +3,11 @@
 [![Help](https://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://www.odoo.com/forum/help-1)
 [![Nightly Builds](https://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://nightly.odoo.com/)
 
+Project Toko Computer
+----
+
+Project ini adalah toko komputer menggunakan odoo 15.0, dimana kita dapat membeli komponen barang komputer dan menservice
+
 Odoo
 ----
 
