@@ -26,4 +26,11 @@
         name="Beli/Service"
         parent="komputertoko_menu_root"
         sequence="35"/>
+
+     <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="komputertoko_lainlain_menu_categ" 
+        name="Lain-lain"
+        parent="komputertoko_menu_root"
+        sequence="40"/>
 </odoo>

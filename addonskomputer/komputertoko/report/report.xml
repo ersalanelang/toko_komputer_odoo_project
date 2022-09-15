@@ -83,4 +83,16 @@
         <field name="binding_model_id" ref="model_komputertoko_service"/>
         <field name="binding_type">report</field>
     </record>
+
+    <!-- untuk wizzard penjualanreport -->
+    <!-- record id dan dan report name berbeda, ini cara yg pak wiku kasih -->
+    <record id="report_komputertoko_penjualanreport_pdf" model="ir.actions.report">
+        <field name="name">Print Report</field>
+        <field name="model">komputertoko.penjualanreport</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">komputertoko.report_penjualanreport_pdf</field>  
+        <field name="report_file">komputertoko.report_penjualanreport_pdf</field>
+        <field name="binding_model_id" ref="model_komputertoko_penjualanreport"/>
+        <field name="binding_type">report</field>
+    </record>
 </odoo>

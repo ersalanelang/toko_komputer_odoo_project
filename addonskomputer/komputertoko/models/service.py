@@ -22,6 +22,15 @@ class service(models.Model):
         ('masuk', 'Masuk'),
         ('cancelled', 'cancelled'),
     ],  required=True, readonly=True, default='masuk')
+    id_member = fields.Char(	
+        compute="_compute_id_member",	
+        string='Id_member',	
+        required=False)
+
+    @api.depends('nama_service')
+    def _compute_id_member(self):
+        for rec in self:
+            rec.id_member = rec.nama_service.id_member
 
     #tombol untuk selesai
     def action_selesai(self):
@@ -37,7 +46,7 @@ class service(models.Model):
     
     #tombol untuk cancelled
     def action_cancelled(self):
-        self.write({'statee': 'cancelled'})
+        self.write({'state': 'cancelled'})
 
     def unlink(self):
         if self.filtered(lambda line: line.state != 'masuk'):

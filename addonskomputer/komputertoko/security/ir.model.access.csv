@@ -11,3 +11,4 @@ access_komputertoko_detailpenjualan,access.komputertoko.detailpenjualan,model_ko
 access_komputertoko_komponendatang,access.komputertoko.komponendatang,model_komputertoko_komponendatang,,1,1,1,1
 
 access_komputertoko_service,access.komputertoko.service,model_komputertoko_service,,1,1,1,1
+access_komputertoko_penjualanreport,access.komputertoko.penjualanreport,model_komputertoko_penjualanreport,,1,1,1,1

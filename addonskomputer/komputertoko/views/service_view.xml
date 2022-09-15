@@ -9,6 +9,7 @@
             <tree>
                 <field name="name" />
                 <field name="nama_service" />
+                <field name="id_member"/>
                 <field name="device" />
                 <field name="tgl_service" />
                 <field name="masalah" />
@@ -36,13 +37,14 @@
                     <field name="state" widget="statusbar" statusbar_visible="masuk,progress,selesai" />
                 </header>
                 <sheet>
-                    <group name="service" attrs="{'readonly' : [('state', '!=', 'masuk')]}" >
-                        <field name="name" />
-                        <field name="nama_service" />
-                        <field name="device" />
-                        <field name="tgl_service" />
-                        <field name="masalah" />
-                        <field name="nama_teknisi" />
+                    <group name="service"  >
+                        <field name="name" attrs="{'readonly' : [('state', '!=', 'masuk')]}"/>
+                        <field name="nama_service" attrs="{'readonly' : [('state', '!=', 'masuk')]}"/>
+                        <field name="id_member" attrs="{'readonly' : [('state', '!=', 'masuk')]}"/>
+                        <field name="device" attrs="{'readonly' : [('state', '!=', 'masuk')]}"/>
+                        <field name="tgl_service" attrs="{'readonly' : [('state', '!=', 'masuk')]}"/>
+                        <field name="masalah" attrs="{'readonly' : [('state', '!=', 'masuk')]}"/>
+                        <field name="nama_teknisi" attrs="{'readonly' : [('state', '!=', 'masuk')]}"/>
                     </group>
                 </sheet>
             </form>

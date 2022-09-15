@@ -11,9 +11,15 @@
                             <div class="col-8"><span t-field="d.name"/></div>
                         </div>
                         <div class="row">
+                            <t t-foreach="d.nama_pembeli" t-as="ds">
+                                <div class="col-4">Nama Konsumen : </div>
+                                <div class="col-8"><span t-field="ds.display_name"/></div>                                   
+                            </t>
+                        </div>
+                        <!-- <div class="row">
                             <div class="col-4">Nama Konsumen : </div>
                             <div class="col-8"><span t-field="d.nama_pembeli"/></div>
-                        </div>
+                        </div> -->
                         <div class="row">
                             <div class="col-4">Tanggal : </div>
                             <div class="col-8"><span t-field="d.tgl_penjualan"/></div>

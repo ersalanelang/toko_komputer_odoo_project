@@ -39,8 +39,8 @@
     <menuitem 
         id="komponendatang_menu_act_wizard"
         name="Input komponen"
-        parent="komputertoko_menu_root"
+        parent="komputertoko_lainlain_menu_categ"
         action="komponendatang_action_wizzard"
-        sequence="40"/>
+        sequence="10"/>
 
 </odoo>

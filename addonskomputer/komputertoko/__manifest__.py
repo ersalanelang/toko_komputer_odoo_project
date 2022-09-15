@@ -44,6 +44,9 @@
         'report/print_faktur_komponen.xml',
         'wizard/komponendatang_view.xml',
         'report/print_faktur_service.xml',
+
+        'wizard/penjualanreport_view.xml',
+        'report/penjualanreport_wizard_template.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

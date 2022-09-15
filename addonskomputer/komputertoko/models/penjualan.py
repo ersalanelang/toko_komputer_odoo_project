@@ -7,7 +7,11 @@ class penjualan(models.Model):
     _description = 'New Description'
 
     name = fields.Char(string='No. Nota')
-    nama_pembeli = fields.Char(string='Nama Pembeli')
+    nama_pembeli = fields.Many2one(comodel_name="res.partner",string='Nama Pembeli')
+    id_member = fields.Char(	
+        compute="_compute_id_member",	
+        string='Id_member',	
+        required=False)
     tgl_penjualan = fields.Datetime(
         string='Tanggal Transaksi',
         default=fields.Datetime.now())
@@ -24,6 +28,14 @@ class penjualan(models.Model):
         ('cancelled', 'Cancelled'),
         ('draft', 'Draft'),
     ],  required=True, readonly=True, default='draft')
+
+    # untuk ngebuat id_member bisa di panggil di respartner
+    # id member jadi bagian nama pembeli yang mana
+    # nama_pembeli many20ne ke respartner
+    @api.depends('nama_pembeli')
+    def _compute_id_member(self):
+        for rec in self:
+            rec.id_member = rec.nama_pembeli.id_member
 
     #tombol untuk done
     def action_done(self):

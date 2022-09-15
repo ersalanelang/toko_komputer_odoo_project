@@ -8,6 +8,7 @@ class ResPartner(models.Model):
     level       = fields.Char(string='Level')
     is_konsumen = fields.Boolean(string='Is Konsumen')
     is_direksi  = fields.Boolean(string='Is Direksi')
-    # id_member = fields.Many2one(
-    #     string=
-    # )
+    id_member = fields.Char(
+        string='Id Member',
+        required=False,
+        domain="[('is_konsumen', '=', True)]")

@@ -7,7 +7,7 @@
         <field name="mode">extension</field>
         <field name="inherit_id" ref="base.view_partner_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='vat']" position="after">
+            <xpath expr="//field[@name='vat']" position="after" attrs="{'invisible': [('is_direksi','=',True)]}">
                 <field name="is_konsumen" attrs="{'invisible': [('is_direksi','=',True)]}"/>
                 <field name="poin" attrs="{'invisible': [('is_direksi','=',True)]}"/>
                 <field name="level" attrs="{'invisible': [('is_direksi','=',True)]}"/>
@@ -15,9 +15,9 @@
             <xpath expr="//field[@name='function']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <!-- <xpath expr="//field[@name='display_name']" position="before">
+            <xpath expr="//field[@name='display_name']" position="before">
                 <field name="id_member"/>
-            </xpath> -->
+            </xpath>
         </field>
     </record>
 
@@ -28,7 +28,7 @@
         <field name="mode">extension</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='vat']" position="after">
+            <xpath expr="//field[@name='vat']" position="after" attrs="{'invisible': [('is_direksi','=',True)]}">
                 <field name="is_konsumen" attrs="{'invisible': [('is_direksi','=',True)]}"/>
                 <field name="poin" attrs="{'invisible': [('is_direksi','=',True)]}"/>
                 <field name="level" attrs="{'invisible': [('is_direksi','=',True)]}"/>
@@ -39,9 +39,9 @@
             <xpath expr="//field[@name='vat']" position="attributes">
                 <attribute name="string">NPWP</attribute>
             </xpath>
-            <!-- <xpath expr="//field[@name='vat']" position="after">
+            <xpath expr="//field[@name='vat']" position="after">
                 <field name="id_member"/>
-            </xpath> -->
+            </xpath>
         </field>
     </record>
 
